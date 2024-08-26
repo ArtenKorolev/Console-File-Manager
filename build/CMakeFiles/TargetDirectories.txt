@@ -1,0 +1,3 @@
+C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles/FileManager.dir
+C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles/edit_cache.dir
+C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles/rebuild_cache.dir
