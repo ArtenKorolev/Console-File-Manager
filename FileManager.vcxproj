@@ -128,6 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\CommandParser.cpp" />
+    <ClCompile Include="source\Directory.cpp" />
+    <ClCompile Include="source\DirEntity.cpp" />
+    <ClCompile Include="source\FileEntity.cpp" />
     <ClCompile Include="source\FileUpdater.cpp" />
     <ClCompile Include="source\common_functions.cpp" />
     <ClCompile Include="source\ConsoleClient.cpp" />
@@ -136,9 +139,13 @@
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\FileReader.cpp" />
     <ClCompile Include="source\FileWriter.cpp" />
+    <ClCompile Include="source\Shell.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\CommandParser.h" />
+    <ClInclude Include="source\Directory.h" />
+    <ClInclude Include="source\DirEntity.h" />
+    <ClInclude Include="source\FileEntity.h" />
     <ClInclude Include="source\FileUpdater.h" />
     <ClInclude Include="source\common_functions.h" />
     <ClInclude Include="source\ConsoleClient.h" />
@@ -146,12 +153,23 @@
     <ClInclude Include="source\FileCreator.h" />
     <ClInclude Include="source\FileReader.h" />
     <ClInclude Include="source\FileWriter.h" />
+    <ClInclude Include="source\Shell.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Downloads\done_tasks_document_icon_256889.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="build\CMakeCache.txt" />
     <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="build\cmake_install.cmake" />
+    <None Include="build\FileManager.exe" />
+    <None Include="build\Makefile" />
+    <None Include="FileManager.aps" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
