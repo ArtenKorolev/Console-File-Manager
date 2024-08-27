@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "common_functions.h"
 #include "FileSystemEntity.h"
 
 class DirEntity : public FileSystemEntity 
