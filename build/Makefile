@@ -153,6 +153,30 @@ source/CommandParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/CommandParser.cpp.s
 .PHONY : source/CommandParser.cpp.s
 
+source/Commands.obj: source/Commands.cpp.obj
+.PHONY : source/Commands.obj
+
+# target to build an object file
+source/Commands.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/Commands.cpp.obj
+.PHONY : source/Commands.cpp.obj
+
+source/Commands.i: source/Commands.cpp.i
+.PHONY : source/Commands.i
+
+# target to preprocess a source file
+source/Commands.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/Commands.cpp.i
+.PHONY : source/Commands.cpp.i
+
+source/Commands.s: source/Commands.cpp.s
+.PHONY : source/Commands.s
+
+# target to generate assembly for a file
+source/Commands.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/Commands.cpp.s
+.PHONY : source/Commands.cpp.s
+
 source/DirEntity.obj: source/DirEntity.cpp.obj
 .PHONY : source/DirEntity.obj
 
@@ -405,6 +429,9 @@ help:
 	@echo "... source/CommandParser.obj"
 	@echo "... source/CommandParser.i"
 	@echo "... source/CommandParser.s"
+	@echo "... source/Commands.obj"
+	@echo "... source/Commands.i"
+	@echo "... source/Commands.s"
 	@echo "... source/DirEntity.obj"
 	@echo "... source/DirEntity.i"
 	@echo "... source/DirEntity.s"

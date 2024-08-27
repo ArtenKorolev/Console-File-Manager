@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj"
   "CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj.d"
+  "CMakeFiles/FileManager.dir/source/Commands.cpp.obj"
+  "CMakeFiles/FileManager.dir/source/Commands.cpp.obj.d"
   "CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj"
   "CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj.d"
   "CMakeFiles/FileManager.dir/source/Directory.cpp.obj"

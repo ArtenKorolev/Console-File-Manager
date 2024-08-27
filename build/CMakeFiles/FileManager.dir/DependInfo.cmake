@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/CommandParser.cpp" "CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj.d"
+  "C:/Users/Королёв PC/Desktop/c++/FileManager/source/Commands.cpp" "CMakeFiles/FileManager.dir/source/Commands.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/Commands.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/DirEntity.cpp" "CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/Directory.cpp" "CMakeFiles/FileManager.dir/source/Directory.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/Directory.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/File.cpp" "CMakeFiles/FileManager.dir/source/File.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/File.cpp.obj.d"

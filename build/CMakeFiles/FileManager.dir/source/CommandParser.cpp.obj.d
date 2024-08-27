@@ -415,4 +415,6 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj: \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Commands.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Commands.cpp

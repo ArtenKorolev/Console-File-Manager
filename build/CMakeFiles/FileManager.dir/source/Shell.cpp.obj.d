@@ -416,4 +416,5 @@ CMakeFiles/FileManager.dir/source/Shell.cpp.obj: \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/CommandParser.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Commands.h
