@@ -14,4 +14,5 @@ public:
     void create(void);
     std::vector<std::string> scan(void);
     bool dirExists(void);
+    bool isDir(void);
 };

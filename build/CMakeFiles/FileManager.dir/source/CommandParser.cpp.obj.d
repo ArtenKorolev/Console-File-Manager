@@ -377,10 +377,6 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/bits/istream.tcc \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.h \
  C:/mingw/gcc/include/c++/13.2.0/filesystem \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_fwd.h \
  C:/mingw/gcc/include/c++/13.2.0/cstdint \
@@ -414,4 +410,8 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/ext/aligned_buffer.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_dir.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_ops.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h

@@ -44,11 +44,16 @@ vector<string> File::read(void)
 
 void File::del(void)
 {
-	remove(this->fileEntity.getFullFilePath().c_str());
+	std::filesystem::remove(this->fileEntity.getFullFilePath().c_str());
 }
 
 void File::clear(void)
 {
 	this->content.clear();
 	this->setNotSaved();
+}
+
+bool File::isFile(void)
+{
+	return std::filesystem::is_regular_file(this->fileEntity.getFullFilePath());
 }

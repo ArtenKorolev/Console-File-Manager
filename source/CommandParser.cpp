@@ -16,7 +16,7 @@ void CommandParser::changeDir(string &currentPath, string toChange)
     DirEntity dirEnt{ toChange, currentPath };
     Directory dir(dirEnt);
 
-    if (dir.dirExists()){
+    if (dir.dirExists() && dir.isDir()){
         currentPath = pathToChange;
     }
 }
@@ -32,7 +32,9 @@ void CommandParser::removeFile(string fileName, string filePath)
 {
     FileEntity fileEnt{fileName, filePath};
     File file(fileEnt);
-    file.del();
+    if (file.isFile()) {
+        file.del();
+    }
 }
 
 void CommandParser::readFile(string fileName, string filePath)
@@ -125,27 +127,29 @@ void CommandParser::parse(string &currentPath, string command)
         this->scanDir(currentPath);
     }
 
-    if (commandContentSize >= 2)
-    {
-        string commandValue = commandContent[1];
+    if (commandContentSize < 2) {
+        return;
+    }
 
-        if (commandName == "cd"){
-            this->changeDir(currentPath, commandValue);
-        }
-        else if (commandName == "crt"){
-            this->createFile(commandValue, currentPath);
-        }
-        else if (commandName == "rm"){
-            this->removeFile(commandValue, currentPath);
-        }
-        else if (commandName == "rd"){
-            this->readFile(commandValue, currentPath);
-        }
-        else if (commandName == "wrt"){
-            this->writeFile(commandValue, currentPath);
-        }
-        else if (commandName == "mkdir"){
-            this->createDir(commandValue, currentPath);
-        }
-    }   
+    string commandValue = commandContent[1];
+
+    if (commandName == "cd"){
+        this->changeDir(currentPath, commandValue);
+    }
+    else if (commandName == "crt"){
+        this->createFile(commandValue, currentPath);
+    }
+    else if (commandName == "rm"){
+        this->removeFile(commandValue, currentPath);
+    }
+    else if (commandName == "rd"){
+        this->readFile(commandValue, currentPath);
+    }
+    else if (commandName == "wrt"){
+        this->writeFile(commandValue, currentPath);
+    }
+    else if (commandName == "mkdir"){
+        this->createDir(commandValue, currentPath);
+    }
+    
 }
