@@ -9,7 +9,7 @@ std::vector<std::string> FileReader::read()
 	std::vector<std::string> content;
 	std::string line;
 
-	std::ifstream in(file.getFullFilePath());
+	std::ifstream in(file.getFullPath());
 
 	if (in.is_open())
 	{

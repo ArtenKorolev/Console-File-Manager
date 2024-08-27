@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
 #include "common_functions.h"
+#include "FileSystemEntity.h"
 
-struct DirEntity
+class DirEntity : public FileSystemEntity 
 {
-    std::string name;
-    std::string path;
-    std::string getFullDirPath();
+public:
+	DirEntity(std::string name, std::string path);
 };

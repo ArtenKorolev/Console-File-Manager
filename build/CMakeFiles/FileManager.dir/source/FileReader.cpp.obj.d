@@ -177,4 +177,5 @@ CMakeFiles/FileManager.dir/source/FileReader.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_ops.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h

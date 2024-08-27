@@ -54,6 +54,9 @@
     <ClCompile Include="source\FileEntity.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="source\FileSystemEntity.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\File.h">
@@ -90,6 +93,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="source\FileEntity.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="source\FileSystemEntity.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

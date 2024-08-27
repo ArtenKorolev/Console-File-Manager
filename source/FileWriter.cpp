@@ -20,14 +20,14 @@ void FileWriter::writeContentToFile(std::vector<std::string> content, std::ofstr
 
 void FileWriter::write(std::vector<std::string> content)
 {
-	std::ofstream out(file.getFullFilePath(), std::ios::app);
+	std::ofstream out(file.getFullPath(), std::ios::app);
 	writeContentToFile(content, out);
 	out.close();
 }
 
 void FileWriter::reWrite(std::vector<std::string> content)
 {
-	std::ofstream out(file.getFullFilePath());
+	std::ofstream out(file.getFullPath());
 	writeContentToFile(content, out);
 	out.close();
 }

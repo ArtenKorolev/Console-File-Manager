@@ -11,9 +11,10 @@ void Shell::showDocs()
 		 << "rd <file name> - read file\n"
 		 << "wrt <file name> - write file\n"
 		 << "<empty input> or help - open docs\n"
-		 << "crtdir <directory name> - create dir\n"
-		 << "show - get all objects in current dir\n"
-		 << "ext - close manager\n";
+		 << "mkdir <directory name> - create dir\n"
+		 << "show - read all objects in current dir\n"
+		 << "ext - close manager\n"
+		;
 }
 
 void Shell::loop()
@@ -22,12 +23,10 @@ void Shell::loop()
 	cout << "Choose disk to start (default - C):" << endl;
 	getline(cin, currentPath);
 
-	if (currentPath.size() > 1)
-	{
+	if (currentPath.size() > 1){
 		currentPath = currentPath[0];
 	}
-	else if (currentPath.size() == 0)
-	{
+	else if (currentPath.size() == 0){
 		currentPath = "C";
 	}
 

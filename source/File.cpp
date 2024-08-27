@@ -44,7 +44,7 @@ vector<string> File::read(void)
 
 void File::del(void)
 {
-	std::filesystem::remove(this->fileEntity.getFullFilePath().c_str());
+	std::filesystem::remove(this->fileEntity.getFullPath());
 }
 
 void File::clear(void)
@@ -55,5 +55,5 @@ void File::clear(void)
 
 bool File::isFile(void)
 {
-	return std::filesystem::is_regular_file(this->fileEntity.getFullFilePath());
+	return std::filesystem::is_regular_file(this->fileEntity.getFullPath());
 }

@@ -8,6 +8,7 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj: C:/Users/Королёв
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
+  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
   C:/mingw/gcc/include/c++/13.2.0/backward/binders.h \
@@ -416,6 +417,7 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj: C:/Users/Королёв
 
 CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.cpp \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h \
+  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
   C:/mingw/gcc/include/c++/13.2.0/backward/binders.h \
   C:/mingw/gcc/include/c++/13.2.0/bit \
@@ -523,6 +525,7 @@ CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj: C:/Users/Королёв\ PC
 CMakeFiles/FileManager.dir/source/Directory.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.cpp \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.h \
+  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
   C:/mingw/gcc/include/c++/13.2.0/backward/binders.h \
   C:/mingw/gcc/include/c++/13.2.0/bit \
@@ -698,6 +701,7 @@ CMakeFiles/FileManager.dir/source/File.cpp.obj: C:/Users/Королёв\ PC/Desk
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
+  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
   C:/mingw/gcc/include/c++/13.2.0/backward/binders.h \
@@ -872,6 +876,7 @@ CMakeFiles/FileManager.dir/source/File.cpp.obj: C:/Users/Королёв\ PC/Desk
 
 CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.cpp \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
+  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
   C:/mingw/gcc/include/c++/13.2.0/backward/binders.h \
   C:/mingw/gcc/include/c++/13.2.0/bit \
@@ -980,6 +985,7 @@ CMakeFiles/FileManager.dir/source/FileReader.cpp.obj: C:/Users/Королёв\ P
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
+  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
   C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
   C:/mingw/gcc/include/c++/13.2.0/backward/binders.h \
@@ -2289,6 +2295,8 @@ C:/mingw/gcc/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h:
 
 C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/CommandParser.cpp:
 
+C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h:
+
 C:/mingw/gcc/x86_64-w64-mingw32/include/shellapi.h:
 
 C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/CommandParser.h:
@@ -2304,16 +2312,6 @@ C:/mingw/gcc/include/c++/13.2.0/initializer_list:
 C:/mingw/gcc/include/c++/13.2.0/bits/stl_function.h:
 
 C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h:
-
-C:/mingw/gcc/include/c++/13.2.0/bits/locale_facets_nonio.h:
-
-C:/mingw/gcc/include/c++/13.2.0/bits/fs_path.h:
-
-C:/mingw/gcc/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h:
-
-C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h:
-
-C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h:
 
 C:/mingw/gcc/include/c++/13.2.0/bits/ostream.tcc:
 
@@ -2334,6 +2332,16 @@ C:/mingw/gcc/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h:
 C:/mingw/gcc/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h:
 
 C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h:
+
+C:/mingw/gcc/include/c++/13.2.0/bits/locale_facets_nonio.h:
+
+C:/mingw/gcc/include/c++/13.2.0/bits/fs_path.h:
+
+C:/mingw/gcc/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h:
+
+C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h:
+
+C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h:
 
 C:/mingw/gcc/include/c++/13.2.0/cstring:
 

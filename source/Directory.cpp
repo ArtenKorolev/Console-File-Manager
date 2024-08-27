@@ -7,13 +7,13 @@ Directory::Directory(DirEntity &dir) : dir(dir) {}
 
 void Directory::create(void)
 {
-    create_directory(this->dir.getFullDirPath());
+    create_directory(this->dir.getFullPath());
 }
 
 vector<string> Directory::scan(void)
 {
     vector<string> objectsInDir;
-    for (const auto &object : directory_iterator(this->dir.getFullDirPath()))
+    for (const auto &object : directory_iterator(this->dir.getFullPath()))
     {
         objectsInDir.push_back(object.path().filename().string());
     }
@@ -23,10 +23,10 @@ vector<string> Directory::scan(void)
 
 bool Directory::dirExists(void)
 {
-    return exists(this->dir.getFullDirPath());
+    return exists(this->dir.getFullPath());
 }
 
 bool Directory::isDir(void)
 {
-    return is_directory(this->dir.getFullDirPath());
+    return is_directory(this->dir.getFullPath());
 }

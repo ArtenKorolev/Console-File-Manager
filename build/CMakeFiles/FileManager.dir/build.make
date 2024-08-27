@@ -153,10 +153,24 @@ CMakeFiles/FileManager.dir/source/FileReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileManager.dir/source/FileReader.cpp.s"
 	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileReader.cpp" -o CMakeFiles/FileManager.dir/source/FileReader.cpp.s
 
+CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj: CMakeFiles/FileManager.dir/flags.make
+CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.cpp
+CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj: CMakeFiles/FileManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj"
+	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj -MF CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj.d -o CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj -c "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.cpp"
+
+CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.i"
+	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.cpp" > CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.i
+
+CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.s"
+	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.cpp" -o CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.s
+
 CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj: CMakeFiles/FileManager.dir/flags.make
 CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.cpp
 CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj: CMakeFiles/FileManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj"
 	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj -MF CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj.d -o CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj -c "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileWriter.cpp"
 
 CMakeFiles/FileManager.dir/source/FileWriter.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/FileManager.dir/source/FileWriter.cpp.s: cmake_force
 CMakeFiles/FileManager.dir/source/Shell.cpp.obj: CMakeFiles/FileManager.dir/flags.make
 CMakeFiles/FileManager.dir/source/Shell.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Shell.cpp
 CMakeFiles/FileManager.dir/source/Shell.cpp.obj: CMakeFiles/FileManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FileManager.dir/source/Shell.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FileManager.dir/source/Shell.cpp.obj"
 	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileManager.dir/source/Shell.cpp.obj -MF CMakeFiles/FileManager.dir/source/Shell.cpp.obj.d -o CMakeFiles/FileManager.dir/source/Shell.cpp.obj -c "C:/Users/Королёв PC/Desktop/c++/FileManager/source/Shell.cpp"
 
 CMakeFiles/FileManager.dir/source/Shell.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/FileManager.dir/source/Shell.cpp.s: cmake_force
 CMakeFiles/FileManager.dir/source/common_functions.cpp.obj: CMakeFiles/FileManager.dir/flags.make
 CMakeFiles/FileManager.dir/source/common_functions.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.cpp
 CMakeFiles/FileManager.dir/source/common_functions.cpp.obj: CMakeFiles/FileManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FileManager.dir/source/common_functions.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FileManager.dir/source/common_functions.cpp.obj"
 	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileManager.dir/source/common_functions.cpp.obj -MF CMakeFiles/FileManager.dir/source/common_functions.cpp.obj.d -o CMakeFiles/FileManager.dir/source/common_functions.cpp.obj -c "C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.cpp"
 
 CMakeFiles/FileManager.dir/source/common_functions.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/FileManager.dir/source/common_functions.cpp.s: cmake_force
 CMakeFiles/FileManager.dir/source/main.cpp.obj: CMakeFiles/FileManager.dir/flags.make
 CMakeFiles/FileManager.dir/source/main.cpp.obj: C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/main.cpp
 CMakeFiles/FileManager.dir/source/main.cpp.obj: CMakeFiles/FileManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FileManager.dir/source/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/FileManager.dir/source/main.cpp.obj"
 	C:/mingw/gcc/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileManager.dir/source/main.cpp.obj -MF CMakeFiles/FileManager.dir/source/main.cpp.obj.d -o CMakeFiles/FileManager.dir/source/main.cpp.obj -c "C:/Users/Королёв PC/Desktop/c++/FileManager/source/main.cpp"
 
 CMakeFiles/FileManager.dir/source/main.cpp.i: cmake_force
@@ -217,6 +231,7 @@ FileManager_OBJECTS = \
 "CMakeFiles/FileManager.dir/source/File.cpp.obj" \
 "CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj" \
 "CMakeFiles/FileManager.dir/source/FileReader.cpp.obj" \
+"CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj" \
 "CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj" \
 "CMakeFiles/FileManager.dir/source/Shell.cpp.obj" \
 "CMakeFiles/FileManager.dir/source/common_functions.cpp.obj" \
@@ -231,6 +246,7 @@ FileManager.exe: CMakeFiles/FileManager.dir/source/Directory.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/source/File.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/source/FileReader.cpp.obj
+FileManager.exe: CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/source/Shell.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/source/common_functions.cpp.obj
@@ -238,7 +254,7 @@ FileManager.exe: CMakeFiles/FileManager.dir/source/main.cpp.obj
 FileManager.exe: CMakeFiles/FileManager.dir/build.make
 FileManager.exe: CMakeFiles/FileManager.dir/linkLibs.rsp
 FileManager.exe: CMakeFiles/FileManager.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable FileManager.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:/Users/Королёв PC/Desktop/c++/FileManager/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable FileManager.exe"
 	F:/cmake/bin/cmake.exe -E rm -f CMakeFiles/FileManager.dir/objects.a
 	C:/mingw/gcc/bin/ar.exe qc CMakeFiles/FileManager.dir/objects.a @CMakeFiles/FileManager.dir/objects1.rsp
 	C:/mingw/gcc/bin/c++.exe -Wl,--whole-archive CMakeFiles/FileManager.dir/objects.a -Wl,--no-whole-archive -o FileManager.exe -Wl,--out-implib,libFileManager.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/FileManager.dir/linkLibs.rsp

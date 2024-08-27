@@ -7,6 +7,7 @@
 #include "common_functions.h"
 #include "FileReader.h"
 #include "FileEntity.h"
+#include "FileSystemEntity.h"
 
 using namespace std;
 

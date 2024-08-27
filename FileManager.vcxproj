@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\FileSystemEntity.cpp" />
     <ClCompile Include="source\CommandParser.cpp" />
     <ClCompile Include="source\Directory.cpp" />
     <ClCompile Include="source\DirEntity.cpp" />
@@ -143,6 +144,7 @@
     <ClCompile Include="source\Shell.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\FileSystemEntity.h" />
     <ClInclude Include="source\CommandParser.h" />
     <ClInclude Include="source\Directory.h" />
     <ClInclude Include="source\DirEntity.h" />

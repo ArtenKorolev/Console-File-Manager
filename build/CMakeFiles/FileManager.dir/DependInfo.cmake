@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/File.cpp" "CMakeFiles/FileManager.dir/source/File.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/File.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileEntity.cpp" "CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileReader.cpp" "CMakeFiles/FileManager.dir/source/FileReader.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/FileReader.cpp.obj.d"
+  "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.cpp" "CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileWriter.cpp" "CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/Shell.cpp" "CMakeFiles/FileManager.dir/source/Shell.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/Shell.cpp.obj.d"
   "C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.cpp" "CMakeFiles/FileManager.dir/source/common_functions.cpp.obj" "gcc" "CMakeFiles/FileManager.dir/source/common_functions.cpp.obj.d"

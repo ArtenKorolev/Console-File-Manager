@@ -171,4 +171,5 @@ CMakeFiles/FileManager.dir/source/Directory.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/vector.tcc \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h

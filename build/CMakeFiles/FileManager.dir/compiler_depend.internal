@@ -9,6 +9,7 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/File.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileReader.h
+ C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileWriter.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.h
  C:/mingw/gcc/include/c++/13.2.0/backward/binders.h
@@ -418,6 +419,7 @@ CMakeFiles/FileManager.dir/source/CommandParser.cpp.obj
 CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/DirEntity.cpp
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/DirEntity.h
+ C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.h
  C:/mingw/gcc/include/c++/13.2.0/backward/binders.h
  C:/mingw/gcc/include/c++/13.2.0/bit
@@ -526,6 +528,7 @@ CMakeFiles/FileManager.dir/source/Directory.cpp.obj
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/Directory.cpp
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/DirEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/Directory.h
+ C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.h
  C:/mingw/gcc/include/c++/13.2.0/backward/binders.h
  C:/mingw/gcc/include/c++/13.2.0/bit
@@ -702,6 +705,7 @@ CMakeFiles/FileManager.dir/source/File.cpp.obj
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/File.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileReader.h
+ C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileWriter.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.h
  C:/mingw/gcc/include/c++/13.2.0/backward/binders.h
@@ -877,6 +881,7 @@ CMakeFiles/FileManager.dir/source/File.cpp.obj
 CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileEntity.cpp
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileEntity.h
+ C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.h
  C:/mingw/gcc/include/c++/13.2.0/backward/binders.h
  C:/mingw/gcc/include/c++/13.2.0/bit
@@ -986,6 +991,7 @@ CMakeFiles/FileManager.dir/source/FileReader.cpp.obj
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/File.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileReader.h
+ C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileSystemEntity.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/FileWriter.h
  C:/Users/Королёв PC/Desktop/c++/FileManager/source/common_functions.h
  C:/mingw/gcc/include/c++/13.2.0/backward/binders.h

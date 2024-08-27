@@ -1,10 +1,3 @@
 #include "DirEntity.h"
 
-std::string DirEntity::getFullDirPath()
-{
-    if (endsWith(path, '\\'))
-    {
-        return path + name;
-    }
-    return path + '\\' + name;
-}
+DirEntity::DirEntity(std::string name, std::string path) : FileSystemEntity(name, path) {}

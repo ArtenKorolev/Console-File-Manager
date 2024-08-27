@@ -1,10 +1,3 @@
 #include "FileEntity.h"
 
-std::string FileEntity::getFullFilePath()
-{
-    if (endsWith(path, '\\'))
-    {
-        return path + name;
-    }
-    return path + '\\' + name;
-}
+FileEntity::FileEntity(std::string name, std::string path) : FileSystemEntity(name, path) {}

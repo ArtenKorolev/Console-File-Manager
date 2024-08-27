@@ -13,7 +13,7 @@ void CommandParser::changeDir(string &currentPath, string toChange)
         pathToChange += '\\' + toChange;
     }
 
-    DirEntity dirEnt{ toChange, currentPath };
+    DirEntity dirEnt(toChange, currentPath);
     Directory dir(dirEnt);
 
     if (dir.dirExists() && dir.isDir()){
@@ -21,41 +21,36 @@ void CommandParser::changeDir(string &currentPath, string toChange)
     }
 }
 
-void CommandParser::createFile(string fileName, string filePath)
+void CommandParser::createFile(FileEntity& entity)
 {
-    FileEntity fileEnt{fileName, filePath};
-    File file(fileEnt);
+    File file(entity);
     file.save();
 }
 
-void CommandParser::removeFile(string fileName, string filePath)
+void CommandParser::removeFile(FileEntity& entity)
 {
-    FileEntity fileEnt{fileName, filePath};
-    File file(fileEnt);
+    File file(entity);
     if (file.isFile()) {
         file.del();
     }
 }
 
-void CommandParser::readFile(string fileName, string filePath)
+void CommandParser::readFile(FileEntity& entity)
 {
-    FileEntity fileEnt{fileName, filePath};
-    File file(fileEnt);
-
+    File file(entity);
     vector<string> fileContent = file.read();
 
     cout << (file.isSaved() ? "" : "*");
-    cout << fileEnt.getFullFilePath() << ':' << endl;
+    cout << entity.getFullPath() << ':' << endl;
 
     for (auto &i : fileContent){
         cout << i << endl;
     }
 }
 
-void CommandParser::writeFile(string fileName, string filePath)
-{
-    FileEntity fileEnt{fileName, filePath};
-    File file(fileEnt);
+void CommandParser::writeFile(FileEntity& entity)
+{;
+    File file(entity);
 
     vector<string> content;
     string line;
@@ -83,10 +78,9 @@ void CommandParser::writeFile(string fileName, string filePath)
     }
 }
 
-void CommandParser::createDir(string name, string path)
+void CommandParser::createDir(DirEntity &entity)
 {
-    DirEntity dirEnt{name, path};
-    Directory dir(dirEnt);
+    Directory dir(entity);
     dir.create();
 }
 
@@ -132,24 +126,25 @@ void CommandParser::parse(string &currentPath, string command)
     }
 
     string commandValue = commandContent[1];
+    FileEntity file(commandValue, currentPath);
 
     if (commandName == "cd"){
         this->changeDir(currentPath, commandValue);
     }
     else if (commandName == "crt"){
-        this->createFile(commandValue, currentPath);
+        this->createFile(file);
     }
     else if (commandName == "rm"){
-        this->removeFile(commandValue, currentPath);
+        this->removeFile(file);
     }
     else if (commandName == "rd"){
-        this->readFile(commandValue, currentPath);
+        this->readFile(file);
     }
     else if (commandName == "wrt"){
-        this->writeFile(commandValue, currentPath);
+        this->writeFile(file);
     }
     else if (commandName == "mkdir"){
-        this->createDir(commandValue, currentPath);
+        DirEntity dir(commandValue, currentPath);
+        this->createDir(dir);
     }
-    
 }

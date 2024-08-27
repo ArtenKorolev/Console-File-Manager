@@ -273,6 +273,30 @@ source/FileReader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/FileReader.cpp.s
 .PHONY : source/FileReader.cpp.s
 
+source/FileSystemEntity.obj: source/FileSystemEntity.cpp.obj
+.PHONY : source/FileSystemEntity.obj
+
+# target to build an object file
+source/FileSystemEntity.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj
+.PHONY : source/FileSystemEntity.cpp.obj
+
+source/FileSystemEntity.i: source/FileSystemEntity.cpp.i
+.PHONY : source/FileSystemEntity.i
+
+# target to preprocess a source file
+source/FileSystemEntity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.i
+.PHONY : source/FileSystemEntity.cpp.i
+
+source/FileSystemEntity.s: source/FileSystemEntity.cpp.s
+.PHONY : source/FileSystemEntity.s
+
+# target to generate assembly for a file
+source/FileSystemEntity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileManager.dir/build.make CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.s
+.PHONY : source/FileSystemEntity.cpp.s
+
 source/FileWriter.obj: source/FileWriter.cpp.obj
 .PHONY : source/FileWriter.obj
 
@@ -396,6 +420,9 @@ help:
 	@echo "... source/FileReader.obj"
 	@echo "... source/FileReader.i"
 	@echo "... source/FileReader.s"
+	@echo "... source/FileSystemEntity.obj"
+	@echo "... source/FileSystemEntity.i"
+	@echo "... source/FileSystemEntity.s"
 	@echo "... source/FileWriter.obj"
 	@echo "... source/FileWriter.i"
 	@echo "... source/FileWriter.s"

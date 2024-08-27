@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FileManager.dir/source/FileEntity.cpp.obj.d"
   "CMakeFiles/FileManager.dir/source/FileReader.cpp.obj"
   "CMakeFiles/FileManager.dir/source/FileReader.cpp.obj.d"
+  "CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj"
+  "CMakeFiles/FileManager.dir/source/FileSystemEntity.cpp.obj.d"
   "CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj"
   "CMakeFiles/FileManager.dir/source/FileWriter.cpp.obj.d"
   "CMakeFiles/FileManager.dir/source/Shell.cpp.obj"
