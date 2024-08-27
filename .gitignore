@@ -369,3 +369,8 @@ build
 \build
 build\
 \bulid\
+build\*
+*.cmake
+CMakeCache.txt
+*.exe
+MakeFile
