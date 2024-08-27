@@ -98,10 +98,10 @@ CMakeFiles/FileManager.dir/source/DirEntity.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/bits/uses_allocator.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/mingw/gcc/include/c++/13.2.0/tuple \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
  C:/mingw/gcc/include/c++/13.2.0/vector \
  C:/mingw/gcc/include/c++/13.2.0/bits/stl_uninitialized.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/stl_vector.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h \
- C:/mingw/gcc/include/c++/13.2.0/bits/vector.tcc \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h
+ C:/mingw/gcc/include/c++/13.2.0/bits/vector.tcc

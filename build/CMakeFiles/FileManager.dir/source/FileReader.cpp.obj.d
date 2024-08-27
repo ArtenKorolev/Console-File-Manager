@@ -141,6 +141,9 @@ CMakeFiles/FileManager.dir/source/FileReader.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/vector.tcc \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h \
  C:/mingw/gcc/include/c++/13.2.0/filesystem \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_fwd.h \
@@ -175,7 +178,4 @@ CMakeFiles/FileManager.dir/source/FileReader.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/ext/aligned_buffer.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_dir.h \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_ops.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileWriter.h

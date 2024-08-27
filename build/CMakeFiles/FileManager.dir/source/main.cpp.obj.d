@@ -132,6 +132,12 @@ CMakeFiles/FileManager.dir/source/main.cpp.obj: \
  C:/mingw/gcc/include/c++/13.2.0/istream \
  C:/mingw/gcc/include/c++/13.2.0/bits/istream.tcc \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Shell.h \
+ C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/CommandParser.h \
+ C:/mingw/gcc/include/c++/13.2.0/vector \
+ C:/mingw/gcc/include/c++/13.2.0/bits/stl_uninitialized.h \
+ C:/mingw/gcc/include/c++/13.2.0/bits/stl_vector.h \
+ C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h \
+ C:/mingw/gcc/include/c++/13.2.0/bits/vector.tcc \
  C:/mingw/gcc/x86_64-w64-mingw32/include/windows.h \
  C:/mingw/gcc/x86_64-w64-mingw32/include/sdkddkver.h \
  C:/mingw/gcc/x86_64-w64-mingw32/include/excpt.h \
@@ -371,11 +377,6 @@ CMakeFiles/FileManager.dir/source/main.cpp.obj: \
  C:/mingw/gcc/x86_64-w64-mingw32/include/mcx.h \
  C:/mingw/gcc/x86_64-w64-mingw32/include/imm.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/common_functions.h \
- C:/mingw/gcc/include/c++/13.2.0/vector \
- C:/mingw/gcc/include/c++/13.2.0/bits/stl_uninitialized.h \
- C:/mingw/gcc/include/c++/13.2.0/bits/stl_vector.h \
- C:/mingw/gcc/include/c++/13.2.0/bits/stl_bvector.h \
- C:/mingw/gcc/include/c++/13.2.0/bits/vector.tcc \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/File.h \
  C:/mingw/gcc/include/c++/13.2.0/filesystem \
  C:/mingw/gcc/include/c++/13.2.0/bits/fs_fwd.h \
@@ -414,7 +415,6 @@ CMakeFiles/FileManager.dir/source/main.cpp.obj: \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileEntity.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileSystemEntity.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/FileReader.h \
- C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/CommandParser.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Directory.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/DirEntity.h \
  C:/Users/Королёв\ PC/Desktop/c++/FileManager/source/Commands.h
