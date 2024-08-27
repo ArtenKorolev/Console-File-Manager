@@ -107,8 +107,8 @@
     <None Include="build\FileManager.exe" />
     <None Include="build\cmake_install.cmake" />
     <None Include="README.md" />
-    <None Include="FileManager.aps" />
     <None Include=".gitignore" />
     <None Include=".gitattributes" />
+    <None Include="FileManager.aps" />
   </ItemGroup>
 </Project>

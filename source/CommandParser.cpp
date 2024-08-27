@@ -46,7 +46,7 @@ void CommandParser::readFile(string fileName, string filePath)
     cout << fileEnt.getFullFilePath() << ':' << endl;
 
     for (auto &i : fileContent){
-        std::cout << i << endl;
+        cout << i << endl;
     }
 }
 
