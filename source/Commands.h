@@ -24,6 +24,12 @@ public:
 	virtual void run(DirEntity& entity) = 0;
 };
 
+class CommandWithPath
+{
+public:
+	virtual void run(std::string& path, std::string toChange) = 0;
+};
+
 class CreateFileCommand : public CommandWithFile 
 {
 public:
@@ -76,4 +82,16 @@ class ShowDocsCommand : public Command
 {
 public:
 	void run() override;
+};
+
+class ChangeDirCommand : public CommandWithPath
+{
+public:
+	void run(std::string& path, std::string toChange) override;
+};
+
+class ChangeDiskCommand : public CommandWithPath
+{
+public:
+	void run(std::string& path, std::string toChange) override;
 };

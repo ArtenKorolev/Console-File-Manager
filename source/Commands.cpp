@@ -98,3 +98,40 @@ void ShowDocsCommand::run()
 		<< "ext - close manager\n"
 		;
 	}
+
+void ChangeDirCommand::run(std::string& path, std::string toChange)
+{
+	string pathToChange = path;
+
+	if (toChange == ".") return;
+
+	if (toChange == "..") {
+		while (true)
+		{
+			pathToChange.pop_back();
+			if (endsWith(pathToChange, '\\')) break;
+		}
+		path = pathToChange;
+		return;
+	}
+
+	if (endsWith(path, '\\')) pathToChange += toChange;
+	else pathToChange += '\\' + toChange;
+
+	DirEntity dirEnt(toChange, path);
+	Directory dir(dirEnt);
+
+	if (dir.dirExists() && dir.isDir()) path = pathToChange;
+}
+
+void ChangeDiskCommand::run(std::string& path, std::string toChange)
+{
+	if (toChange.size() > 1) {
+		path = toChange[0];
+	}
+	else if (toChange.size() == 0) {
+		path = "C";
+	}
+
+	path += ":\\";
+}

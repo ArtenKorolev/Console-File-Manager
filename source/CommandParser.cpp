@@ -2,41 +2,6 @@
 
 using namespace std;
 
-void CommandParser::changeDir(string &currentPath, string toChange)
-{
-    string pathToChange = currentPath;
-
-    if (toChange == ".") {
-        return;
-    }
-
-    if (toChange == "..") {
-        while (true)
-        {
-            pathToChange.pop_back();
-            if (endsWith(pathToChange, '\\')) {
-                break;
-            }
-        }
-        currentPath = pathToChange;
-        return;
-    }
-
-    if (endsWith(currentPath, '\\')){
-        pathToChange += toChange;
-    }
-    else{
-        pathToChange += '\\' + toChange;
-    }
-
-    DirEntity dirEnt(toChange, currentPath);
-    Directory dir(dirEnt);
-
-    if (dir.dirExists() && dir.isDir()){
-        currentPath = pathToChange;
-    }
-}
-
 bool CommandParser::validateCommand(string command, string &name, string &value)
 {
     vector<string> commandWords = separate(command);
@@ -112,9 +77,9 @@ void CommandParser::parse(string &currentPath, string command)
         ShowDocsCommand().run();
         return;
     }
-    
+
     if (cmdName == "cd") {
-        this->changeDir(currentPath, cmdValue);
+        ChangeDirCommand().run(currentPath, cmdValue);
         return;
     }
 

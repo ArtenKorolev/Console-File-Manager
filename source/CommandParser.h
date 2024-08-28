@@ -14,7 +14,6 @@
 class CommandParser
 {
 private:
-    void changeDir(std::string &currentPath, std::string toChange);
     bool validateCommand(std::string command, std::string &name, std::string &value);
     bool isFileCommand(std::string name);
     bool isDirCommand(std::string name);
