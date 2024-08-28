@@ -2,24 +2,22 @@
 
 using namespace std;
 
-bool CommandParser::validateCommand(string command, string &name, string &value)
+void CommandParser::parseCommand(string command, string &name, string &value)
 {
     vector<string> commandWords = separate(command);
     int wordsInCommand = commandWords.size();
 
     if (wordsInCommand == 0) {
-        return false;
+        throw ::BadInputExeption{"Empty input"};
     }
 
     name = commandWords[0];
     if (wordsInCommand == 1){
         value = "";
     }
-    else if (wordsInCommand == 2){
+    else if (wordsInCommand == 2) {
         value = commandWords[1];
     }
-
-    return true;
 }
 
 bool CommandParser::isFileCommand(string name)
@@ -56,15 +54,21 @@ void CommandParser::mapDirCommand(string name, DirEntity& dir)
     else if (name == "show") {
         ScanDirCommand().run(dir);
     }
+    else if (name == "rmdir") {
+        RemoveDirectoryCommand().run(dir);
+    }
 }
 
-void CommandParser::mapOneWordCommand(string name)
+void CommandParser::mapOneWordCommand(string name, string &path)
 {
     if (name == "ext") {
         ExitCommand().run();
     }
     else if (name == "clr") {
         ClearConsoleCommand().run();
+    }
+    else if (name == "chd") {
+        ChangeDiskCommand().run(path);
     }
 }
 
@@ -73,10 +77,7 @@ void CommandParser::parse(string &currentPath, string command)
     string cmdName;
     string cmdValue;
 
-    if (!this->validateCommand(command, cmdName, cmdValue)) {
-        ShowDocsCommand().run();
-        return;
-    }
+    this->parseCommand(command, cmdName, cmdValue);
 
     if (cmdName == "cd") {
         ChangeDirCommand().run(currentPath, cmdValue);
@@ -85,7 +86,7 @@ void CommandParser::parse(string &currentPath, string command)
 
     if (cmdValue.empty() && !this->isDirCommand(cmdName)) 
     {
-        this->mapOneWordCommand(cmdName);
+        this->mapOneWordCommand(cmdName, currentPath);
         return;
     }
 

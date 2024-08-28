@@ -1,21 +1,26 @@
 #include "Shell.h"
+#include "Exeptions\BadInputExeption.h"
 
 using namespace std;
 
 void Shell::loop()
 {
 	string currentPath;
-	string command;
-	cout << "Choose disk to start (default - C):\n";
-	getline(cin, command);
-	ChangeDiskCommand().run(currentPath, command);
+	ChangeDiskCommand().run(currentPath, currentPath);
 
 	CommandParser parser;
+	string command;
 
 	while (true)
 	{
 		cout << currentPath << " -> ";
 		getline(cin, command);
-		parser.parse(currentPath, command);
+		try {
+			parser.parse(currentPath, command);
+		}
+		catch (BadInputExeption &exeption) {
+			cout << "\nBad input: " << exeption.what() << endl << endl;
+			ShowDocsCommand().run();
+		}
 	}
 }

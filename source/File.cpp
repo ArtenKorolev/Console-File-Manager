@@ -12,6 +12,10 @@ void File::save(void)
 	this->saved = true;
 }
 
+void File::create(void)
+{
+}
+
 bool File::isSaved(void)
 {
 	return this->saved == true;
@@ -19,6 +23,14 @@ bool File::isSaved(void)
 
 File::File(FileEntity &file) : fileEntity(file) 
 {
+	if (!this->isFile() && this->exists()) {
+		throw BadInputExeption("This is not a file");
+	}
+	for (auto& i : this->disallowedSymbols) {
+		if (str_contains(file.name, i)) {
+			return;
+		}
+	}
 	FileReader reader(this->fileEntity);
 	this->content = reader.read();
 	this->saved = true;
@@ -42,15 +54,25 @@ vector<string> File::read(void)
     return this->content;
 }
 
-void File::del(void)
+void File::remove(void)
 {
 	std::filesystem::remove(this->fileEntity.getFullPath());
+}
+
+bool File::exists(void)
+{
+	return std::filesystem::exists(this->getPath());
 }
 
 void File::clear(void)
 {
 	this->content.clear();
 	this->setNotSaved();
+}
+
+string File::getPath(void)
+{
+	return this->fileEntity.getFullPath();
 }
 
 bool File::isFile(void)

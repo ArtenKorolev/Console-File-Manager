@@ -1,32 +1,44 @@
 #include "Directory.h"
 
 using namespace std;
-using namespace std::filesystem;
 
-Directory::Directory(DirEntity &dir) : dir(dir) {}
+Directory::Directory(DirEntity &dir) : dir(dir) 
+{
+    if (!this->isDir() && this->exists()) {
+        throw BadInputExeption("This is not a directory");
+    }
+}
 
 void Directory::create(void)
 {
-    create_directory(this->dir.getFullPath());
+    filesystem::create_directory(this->dir.getFullPath());
 }
 
 vector<string> Directory::scan(void)
 {
     vector<string> objectsInDir;
-    for (const auto &object : directory_iterator(this->dir.getFullPath()))
-    {
+    for (const auto &object : filesystem::directory_iterator(this->dir.getFullPath())){
         objectsInDir.push_back(object.path().filename().string());
     }
     
     return objectsInDir;
 }
 
-bool Directory::dirExists(void)
+bool Directory::exists(void)
 {
-    return exists(this->dir.getFullPath());
+    return filesystem::exists(this->dir.getFullPath());
+}
+
+void Directory::remove(void)
+{
+    filesystem::remove_all(this->getPath());
 }
 
 bool Directory::isDir(void)
 {
-    return is_directory(this->dir.getFullPath());
+    return filesystem::is_directory(this->dir.getFullPath());
+}
+
+string Directory::getPath() {
+    return this->dir.getFullPath();
 }

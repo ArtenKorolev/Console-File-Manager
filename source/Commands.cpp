@@ -1,4 +1,5 @@
 #include "Commands.h"
+#include "Exeptions/BadInputExeption.h"
 
 void CreateFileCommand::run(FileEntity& entity)
 {
@@ -10,9 +11,7 @@ void RemoveFileCommand::run(FileEntity& entity)
 {
 	File file(entity);
 
-	if (file.isFile()) {
-		file.del();
-	}
+	file.remove();
 }
 
 void ReadFileCommand::run(FileEntity& entity)
@@ -94,23 +93,35 @@ void ShowDocsCommand::run()
 		<< "wrt <file name> - write file\n"
 		<< "<empty input> or help - open docs\n"
 		<< "mkdir <directory name> - create dir\n"
+		<< "rmdir <directory name> - delete dir\n"
 		<< "show - read all objects in current dir\n"
+		<< "chd - change disk\n"
 		<< "ext - close manager\n"
 		;
 	}
+
+void ChangeDirCommand::goToDirecotryAbove(std::string& path)
+{
+	while (true)
+	{
+		path.pop_back();
+		if (endsWith(path, '\\')){
+			break;
+		}
+	}
+}
 
 void ChangeDirCommand::run(std::string& path, std::string toChange)
 {
 	string pathToChange = path;
 
-	if (toChange == ".") return;
+	if (toChange == ".") {
+		return;
+	}
 
-	if (toChange == "..") {
-		while (true)
-		{
-			pathToChange.pop_back();
-			if (endsWith(pathToChange, '\\')) break;
-		}
+	if (toChange == "..")
+	{
+		goToDirecotryAbove(pathToChange);
 		path = pathToChange;
 		return;
 	}
@@ -121,17 +132,30 @@ void ChangeDirCommand::run(std::string& path, std::string toChange)
 	DirEntity dirEnt(toChange, path);
 	Directory dir(dirEnt);
 
-	if (dir.dirExists() && dir.isDir()) path = pathToChange;
+	if (dir.exists() && dir.isDir()){
+		path = pathToChange;
+	}
 }
 
 void ChangeDiskCommand::run(std::string& path, std::string toChange)
 {
+	cout << "Choose disk (default - C)\n";
+	getline(cin, toChange);
+
 	if (toChange.size() > 1) {
 		path = toChange[0];
 	}
-	else if (toChange.size() == 0) {
+	else if (toChange.empty()) {
 		path = "C";
+	}
+	else {
+		path = toChange;
 	}
 
 	path += ":\\";
+}
+
+void RemoveDirectoryCommand::run(DirEntity& entity)
+{
+	Directory(entity).remove();
 }

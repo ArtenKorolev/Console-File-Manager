@@ -5,12 +5,10 @@
 
 class FileSystemObject
 {
-private:
-	FileSystemEntity entity;
-	std::vector<std::string> disallowedSymbols;
+protected:
+	std::vector<char> disallowedSymbols = {'\"', '\\', '/', '?', '*', '<', '>'};
 
 public:
-	FileSystemObject(FileSystemEntity entity);
 	virtual void create(void) = 0;
 	virtual bool exists(void) = 0;
 	virtual void remove(void) = 0;

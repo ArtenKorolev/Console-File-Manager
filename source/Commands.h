@@ -86,6 +86,8 @@ public:
 
 class ChangeDirCommand : public CommandWithPath
 {
+private:
+	void goToDirecotryAbove(std::string& path);
 public:
 	void run(std::string& path, std::string toChange) override;
 };
@@ -93,5 +95,11 @@ public:
 class ChangeDiskCommand : public CommandWithPath
 {
 public:
-	void run(std::string& path, std::string toChange) override;
+	void run(std::string& path, std::string toChange = "") override;
+};
+
+class RemoveDirectoryCommand : public CommandWithDir 
+{
+public:
+	void run(DirEntity& entity) override;
 };
