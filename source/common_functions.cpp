@@ -65,8 +65,7 @@ std::vector<std::string> separate(std::string str)
 	return words;
 }
 
-template<class T>
-bool contains(vector<T> vec, T value)
+bool m_contains(vector<string> vec, string value)
 {
 	for (auto &i : vec) 
 	{

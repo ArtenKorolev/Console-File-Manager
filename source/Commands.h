@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <windows.h>
 #include "DirEntity.h"
 #include "FileEntity.h"
 #include "File.h"
@@ -21,4 +22,58 @@ class CommandWithDir
 {
 public:
 	virtual void run(DirEntity& entity) = 0;
+};
+
+class CreateFileCommand : public CommandWithFile 
+{
+public:
+	void run(FileEntity& entity) override;
+};
+
+class RemoveFileCommand : public CommandWithFile
+{
+public:
+	void run(FileEntity& entity) override;
+};
+
+class ReadFileCommand : public CommandWithFile
+{
+public:
+	void run(FileEntity& entity) override;
+};
+
+class WriteFileCommand : public CommandWithFile
+{
+public:
+	void run(FileEntity& entity) override;
+};
+
+class ScanDirCommand : public CommandWithDir
+{
+public:
+	void run(DirEntity& entity) override;
+};
+
+class CreateDirCommand : public CommandWithDir
+{
+public:
+	void run(DirEntity& entity) override;
+};
+
+class ExitCommand : public Command
+{
+public:
+	void run() override;
+};
+
+class ClearConsoleCommand : public Command
+{
+public:
+	void run() override;
+};
+
+class ShowDocsCommand : public Command
+{
+public:
+	void run() override;
 };

@@ -4,8 +4,7 @@
 
 bool endsWith(std::string str, char end);
 
-template <class T>
-bool contains(std::vector<T> vec, T value);
+bool m_contains(std::vector<std::string> vec, std::string value);
 
 bool str_contains(std::string str, char value);
 

@@ -1,98 +1,100 @@
 #include "Commands.h"
 
-
-class CreateFileCommand : public CommandWithFile
+void CreateFileCommand::run(FileEntity& entity)
 {
-public:
-	void run(FileEntity &entity) override
+	File file(entity);
+	file.save();
+}
+
+void RemoveFileCommand::run(FileEntity& entity)
+{
+	File file(entity);
+
+	if (file.isFile()) {
+		file.del();
+	}
+}
+
+void ReadFileCommand::run(FileEntity& entity)
+{
+	File file(entity);
+	vector<string> fileContent = file.read();
+
+	cout << (file.isSaved() ? "" : "*");
+	cout << entity.getFullPath() << ':' << endl;
+
+	for (auto& i : fileContent) {
+		cout << i << endl;
+	}
+}
+
+void WriteFileCommand::run(FileEntity &entity)
+{
+	File file(entity);
+
+	vector<string> content;
+	string line;
+
+	cout << "Start typing! Type \"$end\" to stop file's record\n:\n";
+	while (true)
 	{
-		File file(entity);
+		getline(cin, line);
+		if (line == "$end") {
+			break;
+		}
+		content.push_back(line);
+	}
+
+	for (auto& i : content) {
+		file.wirteBack(i);
+	}
+
+	string ans;
+	cout << "Save this file's changes?[y/n]\n";
+	getline(cin, ans);
+
+	if (ans == "y") {
 		file.save();
 	}
-};
+}
 
-class RemoveFileCommand : public CommandWithFile
+void ScanDirCommand::run(DirEntity& entity)
 {
-public:
-	void run(FileEntity& entity) override
-	{
-		File file(entity);
-
-		if (file.isFile()) {
-			file.del();
-		}
+	Directory dir(entity);
+	for (auto& i : dir.scan()) {
+		cout << i << endl;
 	}
-};
+}
 
-class ReadFileCommand : public CommandWithFile
+void CreateDirCommand::run(DirEntity& entity)
 {
-public:
-	void run(FileEntity& entity) override
-	{
-		File file(entity);
-		vector<string> fileContent = file.read();
+	Directory dir(entity);
+	dir.create();
+}
 
-		cout << (file.isSaved() ? "" : "*");
-		cout << entity.getFullPath() << ':' << endl;
-
-		for (auto& i : fileContent) {
-			cout << i << endl;
-		}
-	}
-};
-
-class WriteFileCommand : CommandWithFile 
+void ExitCommand::run() 
 {
-public:
-	void run(FileEntity &entity) 
-	{
-		File file(entity);
+	cout << "Bye\n";
+	Sleep(1000);
+	exit(0);
+}
 
-		vector<string> content;
-		string line;
-
-		cout << "Start typing! Type \"$end\" to stop file's record\n:\n";
-		while (true)
-		{
-			getline(cin, line);
-			if (line == "$end") {
-				break;
-			}
-			content.push_back(line);
-		}
-
-		for (auto& i : content) {
-			file.wirteBack(i);
-		}
-
-		string ans;
-		cout << "Save this file's changes?[y/n]\n";
-		getline(cin, ans);
-
-		if (ans == "y") {
-			file.save();
-		}
-	}
-};
-
-class ScanDirCommand : CommandWithDir 
+void ClearConsoleCommand::run()
 {
-public:
-	void run(DirEntity& entity) override
-	{
-		Directory dir(entity);
-		for (auto& i : dir.scan()) {
-			cout << i << endl;
-		}
-	}
-};
+	system("cls");
+}
 
-class CreateDirCommand : CommandWithDir
+void ShowDocsCommand::run()
 {
-public:
-	void run(DirEntity& entity) override 
-	{
-		Directory dir(entity);
-		dir.create();
+	cout << "cd <dir name> - enter to this dir\n"
+		<< "clr - clear console\n"
+		<< "crt <file name> - create file in current dir\n"
+		<< "rm <file name> - delete file in current dir\n"
+		<< "rd <file name> - read file\n"
+		<< "wrt <file name> - write file\n"
+		<< "<empty input> or help - open docs\n"
+		<< "mkdir <directory name> - create dir\n"
+		<< "show - read all objects in current dir\n"
+		<< "ext - close manager\n"
+		;
 	}
-};

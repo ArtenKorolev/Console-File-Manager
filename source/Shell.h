@@ -5,9 +5,6 @@
 
 class Shell
 {
-private:
-	void showDocs(void);
-
 public:
 	void loop();
 };

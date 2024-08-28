@@ -1,11 +1,26 @@
 #include "CommandParser.h"
-#include "Commands.cpp"
 
 using namespace std;
 
 void CommandParser::changeDir(string &currentPath, string toChange)
 {
     string pathToChange = currentPath;
+
+    if (toChange == ".") {
+        return;
+    }
+
+    if (toChange == "..") {
+        while (true)
+        {
+            pathToChange.pop_back();
+            if (endsWith(pathToChange, '\\')) {
+                break;
+            }
+        }
+        currentPath = pathToChange;
+        return;
+    }
 
     if (endsWith(currentPath, '\\')){
         pathToChange += toChange;
@@ -22,65 +37,103 @@ void CommandParser::changeDir(string &currentPath, string toChange)
     }
 }
 
+bool CommandParser::validateCommand(string command, string &name, string &value)
+{
+    vector<string> commandWords = separate(command);
+    int wordsInCommand = commandWords.size();
+
+    if (wordsInCommand == 0) {
+        return false;
+    }
+
+    name = commandWords[0];
+    if (wordsInCommand == 1){
+        value = "";
+    }
+    else if (wordsInCommand == 2){
+        value = commandWords[1];
+    }
+
+    return true;
+}
+
+bool CommandParser::isFileCommand(string name)
+{
+    return m_contains(this->fileCommands, name);
+}
+
+bool CommandParser::isDirCommand(string name)
+{
+    return m_contains(this->dirCommands, name);
+}
+
+void CommandParser::mapFileCommand(string name, FileEntity& file)
+{
+    if (name == "crt") {
+        CreateFileCommand().run(file);
+    }
+    else if (name == "rd") {
+        ReadFileCommand().run(file);
+    }
+    else if (name == "rm") {
+        RemoveFileCommand().run(file);
+    }
+    else if (name == "wrt") {
+        WriteFileCommand().run(file);
+    }
+}
+
+void CommandParser::mapDirCommand(string name, DirEntity& dir)
+{
+    if (name == "mkdir") {
+        CreateDirCommand().run(dir);
+    }
+    else if (name == "show") {
+        ScanDirCommand().run(dir);
+    }
+}
+
+void CommandParser::mapOneWordCommand(string name)
+{
+    if (name == "ext") {
+        ExitCommand().run();
+    }
+    else if (name == "clr") {
+        ClearConsoleCommand().run();
+    }
+}
+
 void CommandParser::parse(string &currentPath, string command)
 {
-    vector<string> commandContent = separate(command);
-    int commandContentSize = commandContent.size();
+    string cmdName;
+    string cmdValue;
 
-    if (commandContentSize < 1){
+    if (!this->validateCommand(command, cmdName, cmdValue)) {
+        ShowDocsCommand().run();
+        return;
+    }
+    
+    if (cmdName == "cd") {
+        this->changeDir(currentPath, cmdValue);
         return;
     }
 
-    string commandName = commandContent[0];
-
-    if (commandName == "clr")
+    if (cmdValue.empty() && !this->isDirCommand(cmdName)) 
     {
-        system("cls");
+        this->mapOneWordCommand(cmdName);
         return;
     }
 
-    else if (commandName == "ext")
+    if (this->isFileCommand(cmdName)) 
     {
-        cout << "Bye\n";
-        Sleep(1000);
-        exit(0);
-    }
-
-    else if (commandName == "show"){
-        DirEntity dir("", currentPath);
-        ScanDirCommand command;
-        command.run(dir);
-    }
-
-    if (commandContentSize < 2) {
+        FileEntity file(cmdValue, currentPath);
+        this->mapFileCommand(cmdName, file);
         return;
     }
 
-    string commandValue = commandContent[1];
-    FileEntity file(commandValue, currentPath);
-
-    if (commandName == "cd"){
-        this->changeDir(currentPath, commandValue);
-    }
-    else if (commandName == "crt"){
-        CreateFileCommand command;
-        command.run(file);
-    }
-    else if (commandName == "rm"){
-        RemoveFileCommand command;
-        command.run(file);
-    }
-    else if (commandName == "rd"){
-        ReadFileCommand command;
-        command.run(file);
-    }
-    else if (commandName == "wrt"){
-        WriteFileCommand command;
-        command.run(file);
-    } 
-    else if (commandName == "mkdir"){
-        DirEntity dir(commandValue, currentPath);
-        CreateDirCommand command;
-        command.run(dir);
+    if (this->isDirCommand(cmdName)) 
+    {
+        DirEntity directory(cmdValue, currentPath);
+        this->mapDirCommand(cmdName, directory);
     }
 }
