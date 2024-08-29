@@ -4,7 +4,7 @@
 void CreateFileCommand::run(FileEntity& entity)
 {
 	File file(entity);
-	file.save();
+	file.create();
 }
 
 void RemoveFileCommand::run(FileEntity& entity)
@@ -132,9 +132,10 @@ void ChangeDirCommand::run(std::string& path, std::string toChange)
 	DirEntity dirEnt(toChange, path);
 	Directory dir(dirEnt);
 
-	if (dir.exists() && dir.isDir()){
-		path = pathToChange;
+	if (!dir.exists()){
+		throw NotExistsExeption("Directory does not exists");
 	}
+	path = pathToChange;
 }
 
 void ChangeDiskCommand::run(std::string& path, std::string toChange)

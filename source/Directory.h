@@ -5,6 +5,7 @@
 #include "DirEntity.h"
 #include "FileSystemObject.h"
 #include "Exeptions/BadInputExeption.h"
+#include "Exeptions/NotExistsExeption.h"
 
 class Directory : public FileSystemObject
 {

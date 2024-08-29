@@ -18,9 +18,11 @@ void Shell::loop()
 		try {
 			parser.parse(currentPath, command);
 		}
-		catch (BadInputExeption &exeption) {
+		catch (BadInputExeption& exeption){
 			cout << "\nBad input: " << exeption.what() << endl << endl;
-			ShowDocsCommand().run();
+		}
+		catch (NotExistsExeption& exeption) {
+			cout << "\nNot exists: " << exeption.what() << endl << endl;
 		}
 	}
 }

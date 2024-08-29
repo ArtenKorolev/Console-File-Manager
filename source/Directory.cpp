@@ -16,6 +16,10 @@ void Directory::create(void)
 
 vector<string> Directory::scan(void)
 {
+    if (!this->exists()) {
+        throw NotExistsExeption("Directory does not exists");
+    }
+
     vector<string> objectsInDir;
     for (const auto &object : filesystem::directory_iterator(this->dir.getFullPath())){
         objectsInDir.push_back(object.path().filename().string());
@@ -31,6 +35,9 @@ bool Directory::exists(void)
 
 void Directory::remove(void)
 {
+    if (!this->exists()) {
+        throw NotExistsExeption("Directory does not exists");
+    }
     filesystem::remove_all(this->getPath());
 }
 

@@ -14,6 +14,7 @@ void File::save(void)
 
 void File::create(void)
 {
+	this->save();
 }
 
 bool File::isSaved(void)
@@ -60,7 +61,7 @@ vector<string> File::read(void)
 void File::remove(void)
 {
 	if (!this->exists()) {
-		throw 
+		throw NotExistsExeption("File does not exists");
 	}
 	std::filesystem::remove(this->fileEntity.getFullPath());
 }

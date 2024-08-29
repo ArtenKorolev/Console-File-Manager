@@ -8,6 +8,7 @@
 #include "FileEntity.h"
 #include "FileSystemObject.h"
 #include "Exeptions\BadInputExeption.h"
+#include "Exeptions\NotExistsExeption.h"
 
 using namespace std;
 
