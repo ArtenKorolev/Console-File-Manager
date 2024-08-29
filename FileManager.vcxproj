@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Exeptions\NotExistsExeption.cpp" />
     <ClCompile Include="source\Exeptions\BaseExeption.cpp" />
     <ClCompile Include="source\Exeptions\BadInputExeption.cpp" />
     <ClCompile Include="source\FileSystemObject.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="source\Shell.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Exeptions\NotExistsExeption.h" />
     <ClInclude Include="source\Exeptions\BaseExeption.h" />
     <ClInclude Include="source\Exeptions\BadInputExeption.h" />
     <ClInclude Include="source\FileSystemObject.h" />

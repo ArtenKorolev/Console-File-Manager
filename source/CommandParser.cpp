@@ -96,10 +96,11 @@ void CommandParser::parse(string &currentPath, string command)
         this->mapFileCommand(cmdName, file);
         return;
     }
-
+    
     if (this->isDirCommand(cmdName)) 
     {
         DirEntity directory(cmdValue, currentPath);
         this->mapDirCommand(cmdName, directory);
     }
+
 }

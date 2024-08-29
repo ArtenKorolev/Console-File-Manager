@@ -44,7 +44,10 @@ void File::wirteBack(string value)
 
 void File::removeBack(void)
 {
-	if (this->content.size() == 0) return;
+	if (this->content.size() == 0)
+	{
+		return;
+	}
 	this->content.pop_back();
 	this->setNotSaved();
 }
@@ -56,6 +59,9 @@ vector<string> File::read(void)
 
 void File::remove(void)
 {
+	if (!this->exists()) {
+		throw 
+	}
 	std::filesystem::remove(this->fileEntity.getFullPath());
 }
 
