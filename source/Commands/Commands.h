@@ -103,3 +103,9 @@ class RemoveDirectoryCommand : public CommandWithDir
 public:
 	void run(DirEntity& entity) override;
 };
+
+class CleanFileCommand : public CommandWithFile
+{
+public:
+	void run(FileEntity& entity) override;
+};

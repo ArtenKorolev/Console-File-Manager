@@ -18,19 +18,19 @@
     <ClCompile Include="source\main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\File.cpp">
+    <ClCompile Include="source\File\File.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\common_functions.cpp">
+    <ClCompile Include="source\common\common_functions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="source\FileCreator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\FileReader.cpp">
+    <ClCompile Include="source\File\FileReader.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\FileWriter.cpp">
+    <ClCompile Include="source\File\FileWriter.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="source\ConsoleClient.cpp">
@@ -39,28 +39,28 @@
     <ClCompile Include="source\FileUpdater.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\CommandParser.cpp">
+    <ClCompile Include="source\Commands\CommandParser.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\Directory.cpp">
+    <ClCompile Include="source\Directory\Directory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\DirEntity.cpp">
+    <ClCompile Include="source\Entities\DirEntity.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="source\Shell.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\FileEntity.cpp">
+    <ClCompile Include="source\Entities\FileEntity.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\FileSystemEntity.cpp">
+    <ClCompile Include="source\Entities\FileSystemEntity.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\Commands.cpp">
+    <ClCompile Include="source\Commands\Commands.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\FileSystemObject.cpp">
+    <ClCompile Include="source\FileSystem\FileSystemObject.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="source\Exeptions\BadInputExeption.cpp">
@@ -74,19 +74,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\File.h">
+    <ClInclude Include="source\File\File.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\common_functions.h">
+    <ClInclude Include="source\common\common_functions.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="source\FileCreator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\FileReader.h">
+    <ClInclude Include="source\File\FileReader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\FileWriter.h">
+    <ClInclude Include="source\File\FileWriter.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="source\ConsoleClient.h">
@@ -95,28 +95,28 @@
     <ClInclude Include="source\FileUpdater.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\CommandParser.h">
+    <ClInclude Include="source\Commands\CommandParser.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\Directory.h">
+    <ClInclude Include="source\Directory\Directory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\DirEntity.h">
+    <ClInclude Include="source\Entities\DirEntity.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="source\Shell.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\FileEntity.h">
+    <ClInclude Include="source\Entities\FileEntity.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\FileSystemEntity.h">
+    <ClInclude Include="source\Entities\FileSystemEntity.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\Commands.h">
+    <ClInclude Include="source\Commands\Commands.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\FileSystemObject.h">
+    <ClInclude Include="source\FileSystem\FileSystemObject.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="source\Exeptions\BadInputExeption.h">

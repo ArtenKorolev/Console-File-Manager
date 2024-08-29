@@ -1,5 +1,5 @@
 #include "Commands.h"
-#include "Exeptions/BadInputExeption.h"
+#include "BadInputExeption.h"
 
 void CreateFileCommand::run(FileEntity& entity)
 {
@@ -85,7 +85,7 @@ void ClearConsoleCommand::run()
 
 void ShowDocsCommand::run()
 {
-	cout << "cd <dir name> - enter to this dir\n"
+	cout << "\ncd <dir name> - enter to this dir\n"
 		<< "clr - clear console\n"
 		<< "crt <file name> - create file in current dir\n"
 		<< "rm <file name> - delete file in current dir\n"
@@ -96,7 +96,8 @@ void ShowDocsCommand::run()
 		<< "rmdir <directory name> - delete dir\n"
 		<< "show - read all objects in current dir\n"
 		<< "chd - change disk\n"
-		<< "ext - close manager\n"
+		<< "cln <file name> - clear all file's content\n"
+		<< "ext - close manager\n\n"
 		;
 	}
 
@@ -159,4 +160,16 @@ void ChangeDiskCommand::run(std::string& path, std::string toChange)
 void RemoveDirectoryCommand::run(DirEntity& entity)
 {
 	Directory(entity).remove();
+}
+
+void CleanFileCommand::run(FileEntity& entity)
+{
+	File file(entity);
+	file.clear();
+	string choice;
+	cout << "Do you really want clear all file?[y/n]\n";
+	getline(cin, choice);
+	if (choice == "y") {
+		file.save();
+	}
 }

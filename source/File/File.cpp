@@ -1,5 +1,12 @@
 #include "File.h"
 
+void File::throwExeptionIfNotExists(void)
+{
+	if (!this->exists()) {
+		throw NotExistsExeption("File does not exists");
+	}
+}
+
 void File::setNotSaved(void)
 {
 	this->saved = false;
@@ -43,26 +50,15 @@ void File::wirteBack(string value)
 	this->setNotSaved();
 }
 
-void File::removeBack(void)
-{
-	if (this->content.size() == 0)
-	{
-		return;
-	}
-	this->content.pop_back();
-	this->setNotSaved();
-}
-
 vector<string> File::read(void)
 {
+	this->throwExeptionIfNotExists();
     return this->content;
 }
 
 void File::remove(void)
 {
-	if (!this->exists()) {
-		throw NotExistsExeption("File does not exists");
-	}
+	this->throwExeptionIfNotExists();
 	std::filesystem::remove(this->fileEntity.getFullPath());
 }
 

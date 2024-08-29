@@ -11,8 +11,7 @@ void FileWriter::writeContentToFile(std::vector<std::string> content, std::ofstr
 {
 	if (out.is_open())
 	{
-		for (auto &i : content)
-		{
+		for (auto &i : content){
 			out << i << std::endl;
 		}
 	}

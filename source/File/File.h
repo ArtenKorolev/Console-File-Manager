@@ -7,8 +7,8 @@
 #include "FileReader.h"
 #include "FileEntity.h"
 #include "FileSystemObject.h"
-#include "Exeptions\BadInputExeption.h"
-#include "Exeptions\NotExistsExeption.h"
+#include "BadInputExeption.h"
+#include "NotExistsExeption.h"
 
 using namespace std;
 
@@ -18,12 +18,12 @@ private:
 	FileEntity &fileEntity;
 	vector<string> content;
 	bool saved = false;
+	void throwExeptionIfNotExists(void);
 
 	void setNotSaved(void);
 public:
 	File(FileEntity &file);
 	void wirteBack(string value);
-	void removeBack(void);
 	vector<string> read(void);
 	void save(void);
 	void create(void) override;

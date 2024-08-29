@@ -44,6 +44,9 @@ void CommandParser::mapFileCommand(string name, FileEntity& file)
     else if (name == "wrt") {
         WriteFileCommand().run(file);
     }
+    else if (name == "cln") {
+        CleanFileCommand().run(file);
+    }
 }
 
 void CommandParser::mapDirCommand(string name, DirEntity& dir)
@@ -70,6 +73,12 @@ void CommandParser::mapOneWordCommand(string name, string &path)
     else if (name == "chd") {
         ChangeDiskCommand().run(path);
     }
+    else if (name == "help") {
+        ShowDocsCommand().run();
+    }
+    else {
+        throw BadInputExeption("Unknown command, type \"help\" to show documentation");
+    }
 }
 
 void CommandParser::parse(string &currentPath, string command)
@@ -79,28 +88,23 @@ void CommandParser::parse(string &currentPath, string command)
 
     this->parseCommand(command, cmdName, cmdValue);
 
-    if (cmdName == "cd") {
+    if (cmdName == "cd"){
         ChangeDirCommand().run(currentPath, cmdValue);
-        return;
     }
-
-    if (cmdValue.empty() && !this->isDirCommand(cmdName)) 
-    {
+    else if (cmdValue.empty() && !this->isDirCommand(cmdName)){
         this->mapOneWordCommand(cmdName, currentPath);
-        return;
     }
-
-    if (this->isFileCommand(cmdName)) 
+    else if (this->isFileCommand(cmdName)) 
     {
         FileEntity file(cmdValue, currentPath);
         this->mapFileCommand(cmdName, file);
-        return;
     }
-    
-    if (this->isDirCommand(cmdName)) 
+    else if (this->isDirCommand(cmdName)) 
     {
         DirEntity directory(cmdValue, currentPath);
         this->mapDirCommand(cmdName, directory);
     }
-
+    else {
+        throw BadInputExeption("Unknown command, type \"help\" to show documentation");
+    }
 }

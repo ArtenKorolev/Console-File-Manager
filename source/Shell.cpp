@@ -1,12 +1,12 @@
 #include "Shell.h"
-#include "Exeptions\BadInputExeption.h"
+
 
 using namespace std;
 
 void Shell::loop()
 {
 	string currentPath;
-	ChangeDiskCommand().run(currentPath, currentPath);
+	ChangeDiskCommand().run(currentPath);
 
 	CommandParser parser;
 	string command;

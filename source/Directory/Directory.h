@@ -4,8 +4,8 @@
 #include <vector>
 #include "DirEntity.h"
 #include "FileSystemObject.h"
-#include "Exeptions/BadInputExeption.h"
-#include "Exeptions/NotExistsExeption.h"
+#include "BadInputExeption.h"
+#include "NotExistsExeption.h"
 
 class Directory : public FileSystemObject
 {
