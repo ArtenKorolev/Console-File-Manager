@@ -9,6 +9,7 @@
 #include "FileSystemObject.h"
 #include "BadInputExeption.h"
 #include "NotExistsExeption.h"
+#include "DisallowedSymbolsInNameExeption.h"
 
 using namespace std;
 

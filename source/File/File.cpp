@@ -36,7 +36,7 @@ File::File(FileEntity &file) : fileEntity(file)
 	}
 	for (auto& i : this->disallowedSymbols) {
 		if (str_contains(file.name, i)) {
-			return;
+			throw DisallowedSymbolsInNameExeption("File name contains disallowed symbol(s)");
 		}
 	}
 	FileReader reader(this->fileEntity);

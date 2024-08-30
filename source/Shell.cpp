@@ -24,5 +24,8 @@ void Shell::loop()
 		catch (NotExistsExeption& exeption) {
 			cout << "\nNot exists: " << exeption.what() << endl << endl;
 		}
+		catch (DisallowedSymbolsInNameExeption& exeption) {
+			cout << "\nBad symbol: " << exeption.what() << endl << endl;
+		}
 	}
 }
