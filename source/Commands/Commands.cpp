@@ -1,5 +1,4 @@
 #include "Commands.h"
-#include "BadInputExeption.h"
 
 void CreateFileCommand::run(FileEntity& entity)
 {
@@ -19,7 +18,6 @@ void ReadFileCommand::run(FileEntity& entity)
 	File file(entity);
 	vector<string> fileContent = file.read();
 
-	cout << (file.isSaved() ? "" : "*");
 	cout << entity.getFullPath() << ':' << endl;
 
 	for (auto& i : fileContent) {
@@ -91,7 +89,7 @@ void ShowDocsCommand::run()
 		<< "rm <file name> - delete file in current dir\n"
 		<< "rd <file name> - read file\n"
 		<< "wrt <file name> - write file\n"
-		<< "<empty input> or help - open docs\n"
+		<< "help - open docs\n"
 		<< "mkdir <directory name> - create dir\n"
 		<< "rmdir <directory name> - delete dir\n"
 		<< "show - read all objects in current dir\n"
@@ -134,7 +132,7 @@ void ChangeDirCommand::run(std::string& path, std::string toChange)
 	Directory dir(dirEnt);
 
 	if (!dir.exists()){
-		throw NotExistsExeption("Directory does not exists");
+		throw NotExistsException("Directory does not exists");
 	}
 	path = pathToChange;
 }

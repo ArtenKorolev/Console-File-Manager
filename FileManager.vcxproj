@@ -128,10 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source\Exeptions\DisallowedSymbolsInNameExeption.cpp" />
-    <ClCompile Include="source\Exeptions\NotExistsExeption.cpp" />
-    <ClCompile Include="source\Exeptions\BaseExeption.cpp" />
-    <ClCompile Include="source\Exeptions\BadInputExeption.cpp" />
+    <ClCompile Include="source\Exceptions\DisallowedSymbolsInNameException.cpp" />
+    <ClCompile Include="source\Exceptions\NotExistsException.cpp" />
+    <ClCompile Include="source\Exceptions\BaseException.cpp" />
+    <ClCompile Include="source\Exceptions\BadInputException.cpp" />
     <ClCompile Include="source\FileSystem\FileSystemObject.cpp" />
     <ClCompile Include="source\Commands\Commands.cpp" />
     <ClCompile Include="source\Entities\FileSystemEntity.cpp" />
@@ -150,10 +150,10 @@
     <ClCompile Include="source\Shell.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Exeptions\DisallowedSymbolsInNameExeption.h" />
-    <ClInclude Include="source\Exeptions\NotExistsExeption.h" />
-    <ClInclude Include="source\Exeptions\BaseExeption.h" />
-    <ClInclude Include="source\Exeptions\BadInputExeption.h" />
+    <ClInclude Include="source\Exceptions\DisallowedSymbolsInNameException.h" />
+    <ClInclude Include="source\Exceptions\NotExistsException.h" />
+    <ClInclude Include="source\Exceptions\BaseException.h" />
+    <ClInclude Include="source\Exceptions\BadInputException.h" />
     <ClInclude Include="source\FileSystem\FileSystemObject.h" />
     <ClInclude Include="source\Commands\Commands.h" />
     <ClInclude Include="source\Entities\FileSystemEntity.h" />

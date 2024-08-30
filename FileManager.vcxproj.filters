@@ -63,13 +63,16 @@
     <ClCompile Include="source\FileSystem\FileSystemObject.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\Exeptions\BadInputExeption.cpp">
+    <ClCompile Include="source\Exceptions\BadInputException.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\Exeptions\BaseExeption.cpp">
+    <ClCompile Include="source\Exceptions\BaseException.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="source\Exeptions\NotExistsExeption.cpp">
+    <ClCompile Include="source\Exceptions\NotExistsException.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Exceptions\DisallowedSymbolsInNameException.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,13 +122,16 @@
     <ClInclude Include="source\FileSystem\FileSystemObject.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\Exeptions\BadInputExeption.h">
+    <ClInclude Include="source\Exceptions\BadInputException.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\Exeptions\BaseExeption.h">
+    <ClInclude Include="source\Exceptions\BaseException.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="source\Exeptions\NotExistsExeption.h">
+    <ClInclude Include="source\Exceptions\NotExistsException.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Exceptions\DisallowedSymbolsInNameException.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

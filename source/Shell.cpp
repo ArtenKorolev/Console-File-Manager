@@ -1,6 +1,5 @@
 #include "Shell.h"
 
-
 using namespace std;
 
 void Shell::loop()
@@ -18,13 +17,13 @@ void Shell::loop()
 		try {
 			parser.parse(currentPath, command);
 		}
-		catch (BadInputExeption& exeption){
+		catch (BadInputException& exeption){
 			cout << "\nBad input: " << exeption.what() << endl << endl;
 		}
-		catch (NotExistsExeption& exeption) {
+		catch (NotExistsException& exeption) {
 			cout << "\nNot exists: " << exeption.what() << endl << endl;
 		}
-		catch (DisallowedSymbolsInNameExeption& exeption) {
+		catch (DisallowedSymbolsInNameException& exeption) {
 			cout << "\nBad symbol: " << exeption.what() << endl << endl;
 		}
 	}

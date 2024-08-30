@@ -5,7 +5,7 @@ using namespace std;
 Directory::Directory(DirEntity &dir) : dir(dir) 
 {
     if (!this->isDir() && this->exists()) {
-        throw BadInputExeption("This is not a directory");
+        throw BadInputException("This is not a directory");
     }
 }
 
@@ -17,7 +17,7 @@ void Directory::create(void)
 vector<string> Directory::scan(void)
 {
     if (!this->exists()) {
-        throw NotExistsExeption("Directory does not exists");
+        throw NotExistsException("Directory does not exists");
     }
 
     vector<string> objectsInDir;
@@ -36,7 +36,7 @@ bool Directory::exists(void)
 void Directory::remove(void)
 {
     if (!this->exists()) {
-        throw NotExistsExeption("Directory does not exists");
+        throw NotExistsException("Directory does not exists");
     }
     filesystem::remove_all(this->getPath());
 }

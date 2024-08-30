@@ -1,9 +1,9 @@
 #include "File.h"
 
-void File::throwExeptionIfNotExists(void)
+void File::throwExceptionIfNotExists(void)
 {
 	if (!this->exists()) {
-		throw NotExistsExeption("File does not exists");
+		throw NotExistsException("File does not exists");
 	}
 }
 
@@ -32,11 +32,11 @@ bool File::isSaved(void)
 File::File(FileEntity &file) : fileEntity(file) 
 {
 	if (!this->isFile() && this->exists()) {
-		throw BadInputExeption("This is not a file");
+		throw BadInputException("This is not a file");
 	}
 	for (auto& i : this->disallowedSymbols) {
 		if (str_contains(file.name, i)) {
-			throw DisallowedSymbolsInNameExeption("File name contains disallowed symbol(s)");
+			throw DisallowedSymbolsInNameException("File name contains disallowed symbol(s)");
 		}
 	}
 	FileReader reader(this->fileEntity);
@@ -52,13 +52,13 @@ void File::wirteBack(string value)
 
 vector<string> File::read(void)
 {
-	this->throwExeptionIfNotExists();
+	this->throwExceptionIfNotExists();
     return this->content;
 }
 
 void File::remove(void)
 {
-	this->throwExeptionIfNotExists();
+	this->throwExceptionIfNotExists();
 	std::filesystem::remove(this->fileEntity.getFullPath());
 }
 

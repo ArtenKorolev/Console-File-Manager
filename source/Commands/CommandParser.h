@@ -9,8 +9,8 @@
 #include "FileEntity.h"
 #include "DirEntity.h"
 #include "FileSystemObject.h"
-#include "BadInputExeption.h"
-#include "BaseExeption.h"
+#include "BadInputException.h"
+#include "BaseException.h"
 #include "Commands.h"
 
 class CommandParser

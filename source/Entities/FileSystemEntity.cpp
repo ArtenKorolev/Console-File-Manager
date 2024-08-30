@@ -5,7 +5,7 @@ FileSystemEntity::FileSystemEntity(std::string name, std::string path) : name(na
 std::string FileSystemEntity::getFullPath()
 {
     if (endsWith(this->path, '\\')){
-        return this->path + name;
+        return this->path + this->name;
     }
-    return this->path + '\\' + name;
+    return this->path + '\\' + this->name;
 }

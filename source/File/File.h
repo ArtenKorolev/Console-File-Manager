@@ -7,9 +7,9 @@
 #include "FileReader.h"
 #include "FileEntity.h"
 #include "FileSystemObject.h"
-#include "BadInputExeption.h"
-#include "NotExistsExeption.h"
-#include "DisallowedSymbolsInNameExeption.h"
+#include "BadInputException.h"
+#include "NotExistsException.h"
+#include "DisallowedSymbolsInNameException.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ private:
 	FileEntity &fileEntity;
 	vector<string> content;
 	bool saved = false;
-	void throwExeptionIfNotExists(void);
+	void throwExceptionIfNotExists(void);
 
 	void setNotSaved(void);
 public:

@@ -1,13 +1,13 @@
 #pragma once
 #include <string>
 
-class BaseExeption
+class BaseException
 {
 private:
 	std::string errorMessage;
 
 public:
-	BaseExeption(std::string message);
+	BaseException(std::string message);
 	std::string what(void);
 };
 

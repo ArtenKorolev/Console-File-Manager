@@ -5,6 +5,7 @@
 #include "FileEntity.h"
 #include "File.h"
 #include "Directory.h"
+#include "BadInputException.h"
 
 class Command
 {
