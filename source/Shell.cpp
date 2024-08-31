@@ -17,14 +17,17 @@ void Shell::loop()
 		try {
 			parser.parse(currentPath, command);
 		}
-		catch (BadInputException& exeption){
-			cout << "\nBad input: " << exeption.what() << endl << endl;
+		catch (BadInputException& exception) {
+			cout << "\nBad input: " << exception.what() << endl << endl;
 		}
-		catch (NotExistsException& exeption) {
-			cout << "\nNot exists: " << exeption.what() << endl << endl;
+		catch (NotExistsException& exception) {
+			cout << "\nNot exists: " << exception.what() << endl << endl;
 		}
-		catch (DisallowedSymbolsInNameException& exeption) {
-			cout << "\nBad symbol: " << exeption.what() << endl << endl;
+		catch (DisallowedSymbolsInNameException& exception) {
+			cout << "\nBad symbol: " << exception.what() << endl << endl;
+		}
+		catch (exception& exception) {
+			cout << "\nUnknown excpetion: \n" << exception.what() << ", please send" << endl << endl;
 		}
 	}
 }

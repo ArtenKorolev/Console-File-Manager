@@ -8,103 +8,90 @@ void CommandParser::parseCommand(string command, string &name, string &value)
     int wordsInCommand = commandWords.size();
 
     if (wordsInCommand == 0) {
-        throw ::BadInputException{"Empty input"};
+        throw BadInputException("Empty input");
     }
 
     name = commandWords[0];
     if (wordsInCommand == 1){
         value = "";
     }
-    else if (wordsInCommand == 2) {
+    else if (wordsInCommand >= 2) 
+    {
         value = commandWords[1];
+
+        for (int i = 2; i < wordsInCommand;i++) {
+            value += ' ' + commandWords[i];
+        }
     }
 }
 
-bool CommandParser::isFileCommand(string name)
+void CommandParser::mapResult(string &path, string name, string value)
 {
-    return m_contains(this->fileCommands, name);
+    if (value.empty())
+    {
+        if (name == "ext") {
+            ExitCommand().run();
+        }
+        else if (name == "clr") {
+            ClearConsoleCommand().run();
+        }
+        else if (name == "help") {
+            ShowDocsCommand().run();
+        }
+        else if (name == "chd") {
+            ChangeDiskCommand().run(path);
+        }
+        else if (name == "show") {
+            DirEntity dir("", path);
+            ScanDirCommand().run(dir);
+        }
+        else {
+            this->throwUnknownCommandExeption();
+        }
+    }
+    else 
+    {
+        FileEntity file(value, path);
+        DirEntity dir(value, path);
+
+        if (name == "crt") {
+            CreateFileCommand().run(file);
+        }
+        else if (name == "rm") {
+            RemoveFileCommand().run(file);
+        }
+        else if (name == "rd") {
+            ReadFileCommand().run(file);
+        }
+        else if (name == "cln") {
+            CleanFileCommand().run(file);
+        }
+        else if (name == "wrt") {
+            WriteFileCommand().run(file);
+        }
+        else if (name == "mkdir") {
+            CreateDirCommand().run(dir);
+        }
+        else if (name == "rmdir") {
+            RemoveDirectoryCommand().run(dir);
+        }
+        else if (name == "cd") {
+            ChangeDirCommand().run(path, value);
+        }
+        else {
+            this->throwUnknownCommandExeption();
+        }
+    }
 }
 
-bool CommandParser::isDirCommand(string name)
+void CommandParser::throwUnknownCommandExeption(void)
 {
-    return m_contains(this->dirCommands, name);
-}
-
-void CommandParser::mapFileCommand(string name, FileEntity& file)
-{
-    if (name == "crt") {
-        CreateFileCommand().run(file);
-    }
-    else if (name == "rd") {
-        ReadFileCommand().run(file);
-    }
-    else if (name == "rm") {
-        RemoveFileCommand().run(file);
-    }
-    else if (name == "wrt") {
-        WriteFileCommand().run(file);
-    }
-    else if (name == "cln") {
-        CleanFileCommand().run(file);
-    }
-}
-
-void CommandParser::mapDirCommand(string name, DirEntity& dir)
-{
-    if (name == "mkdir") {
-        CreateDirCommand().run(dir);
-    }
-    else if (name == "show") {
-        ScanDirCommand().run(dir);
-    }
-    else if (name == "rmdir") {
-        RemoveDirectoryCommand().run(dir);
-    }
-}
-
-void CommandParser::mapOneWordCommand(string name, string &path)
-{
-    if (name == "ext") {
-        ExitCommand().run();
-    }
-    else if (name == "clr") {
-        ClearConsoleCommand().run();
-    }
-    else if (name == "chd") {
-        ChangeDiskCommand().run(path);
-    }
-    else if (name == "help") {
-        ShowDocsCommand().run();
-    }
-    else {
-        throw BadInputException("Unknown command, type \"help\" to see documentation");
-    }
+    throw BadInputException("Unknown command or bad args, type \"help\" to see documentation");
 }
 
 void CommandParser::parse(string &currentPath, string command)
 {
-    string cmdName;
-    string cmdValue;
-
-    this->parseCommand(command, cmdName, cmdValue);
-
-    if (cmdName == "cd"){
-        ChangeDirCommand().run(currentPath, cmdValue);
-    }
-    else if (cmdValue.empty() && !this->isDirCommand(cmdName)){
-        this->mapOneWordCommand(cmdName, currentPath);
-    }
-    else if (this->isFileCommand(cmdName)) 
-    {
-        FileEntity file(cmdValue, currentPath);
-        this->mapFileCommand(cmdName, file);
-    }
-    else if (this->isDirCommand(cmdName)) 
-    {
-        DirEntity directory(cmdValue, currentPath);
-        this->mapDirCommand(cmdName, directory);
-    }
-    else {
-        throw BadInputException("Unknown command, type \"help\" to see documentation");
-    }
+    string name, value;
+    this->parseCommand(command, name, value);
+    this->mapResult(currentPath, name, value);
 }

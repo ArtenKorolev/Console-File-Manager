@@ -104,7 +104,10 @@ void ChangeDirCommand::goToDirecotryAbove(std::string& path)
 	while (true)
 	{
 		path.pop_back();
-		if (endsWith(path, '\\')){
+
+		if (endsWith(path, '\\'))
+		{
+			path.pop_back();
 			break;
 		}
 	}
