@@ -77,7 +77,7 @@ void CommandParser::mapOneWordCommand(string name, string &path)
         ShowDocsCommand().run();
     }
     else {
-        throw BadInputException("Unknown command, type \"help\" to show documentation");
+        throw BadInputException("Unknown command, type \"help\" to see documentation");
     }
 }
 
@@ -105,6 +105,6 @@ void CommandParser::parse(string &currentPath, string command)
         this->mapDirCommand(cmdName, directory);
     }
     else {
-        throw BadInputException("Unknown command, type \"help\" to show documentation");
+        throw BadInputException("Unknown command, type \"help\" to see documentation");
     }
 }
