@@ -9,7 +9,6 @@ void CreateFileCommand::run(FileEntity& entity)
 void RemoveFileCommand::run(FileEntity& entity)
 {
 	File file(entity);
-
 	file.remove();
 }
 
@@ -58,6 +57,7 @@ void WriteFileCommand::run(FileEntity &entity)
 void ScanDirCommand::run(DirEntity& entity)
 {
 	Directory dir(entity);
+
 	for (auto& i : dir.scan()) {
 		cout << i << endl;
 	}
@@ -85,15 +85,15 @@ void ShowDocsCommand::run()
 {
 	cout << "\ncd <dir name> - enter to this dir\n"
 		<< "clr - clear console\n"
-		<< "crt <file name> - create file in current dir\n"
+		<< "cr <file name> - create file in current dir\n"
 		<< "rm <file name> - delete file in current dir\n"
 		<< "rd <file name> - read file\n"
 		<< "wrt <file name> - write file\n"
 		<< "help - open docs\n"
-		<< "mkdir <directory name> - create dir\n"
-		<< "rmdir <directory name> - delete dir\n"
+		<< "crd <directory name> - create dir\n"
+		<< "rmd <directory name> - delete dir\n"
 		<< "show - read all objects in current dir\n"
-		<< "chd - change disk\n"
+		<< "chd <disk> - change disk\n"
 		<< "cln <file name> - clear all file's content\n"
 		<< "ext - close manager\n\n"
 		;
@@ -128,8 +128,12 @@ void ChangeDirCommand::run(std::string& path, std::string toChange)
 		return;
 	}
 
-	if (endsWith(path, '\\')) pathToChange += toChange;
-	else pathToChange += '\\' + toChange;
+	if (endsWith(path, '\\')) {
+		pathToChange += toChange;
+	}
+	else {
+		pathToChange += '\\' + toChange;
+	}
 
 	DirEntity dirEnt(toChange, path);
 	Directory dir(dirEnt);
@@ -137,14 +141,12 @@ void ChangeDirCommand::run(std::string& path, std::string toChange)
 	if (!dir.exists()){
 		throw NotExistsException("Directory does not exists");
 	}
+
 	path = pathToChange;
 }
 
 void ChangeDiskCommand::run(std::string& path, std::string toChange)
 {
-	cout << "Choose disk (default - C)\n";
-	getline(cin, toChange);
-
 	if (toChange.size() > 1) {
 		path = toChange[0];
 	}
@@ -155,7 +157,7 @@ void ChangeDiskCommand::run(std::string& path, std::string toChange)
 		path = toChange;
 	}
 
-	path += ":\\";
+	path += ":";
 }
 
 void RemoveDirectoryCommand::run(DirEntity& entity)
@@ -166,11 +168,14 @@ void RemoveDirectoryCommand::run(DirEntity& entity)
 void CleanFileCommand::run(FileEntity& entity)
 {
 	File file(entity);
-	file.clear();
+
 	string choice;
 	cout << "Do you really want clear all file?[y/n]\n";
 	getline(cin, choice);
-	if (choice == "y") {
+
+	if (choice == "y") 
+	{
 		file.save();
+		file.clear();	
 	}
 }

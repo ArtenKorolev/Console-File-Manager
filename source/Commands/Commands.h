@@ -96,7 +96,7 @@ public:
 class ChangeDiskCommand : public CommandWithPath
 {
 public:
-	void run(std::string& path, std::string toChange = "") override;
+	void run(std::string& path, std::string toChange) override;
 };
 
 class RemoveDirectoryCommand : public CommandWithDir 

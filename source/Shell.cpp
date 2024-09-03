@@ -5,10 +5,15 @@ using namespace std;
 void Shell::loop()
 {
 	string currentPath;
-	ChangeDiskCommand().run(currentPath);
+	string command;
+
+	cout << "Choose disk to start (default - C)" << endl;
+
+	getline(cin, command);
+
+	ChangeDiskCommand().run(currentPath, command);
 
 	CommandParser parser;
-	string command;
 
 	while (true)
 	{

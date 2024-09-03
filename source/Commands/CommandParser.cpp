@@ -2,6 +2,13 @@
 
 using namespace std;
 
+void CommandParser::parse(string &currentPath, string command)
+{
+    string name, value;
+    this->parseCommand(command, name, value);
+    this->mapResult(currentPath, name, value);
+}
+
 void CommandParser::parseCommand(string command, string &name, string &value)
 {
     vector<string> commandWords = separate(command);
@@ -38,9 +45,6 @@ void CommandParser::mapResult(string &path, string name, string value)
         else if (name == "help") {
             ShowDocsCommand().run();
         }
-        else if (name == "chd") {
-            ChangeDiskCommand().run(path);
-        }
         else if (name == "show") {
             DirEntity dir("", path);
             ScanDirCommand().run(dir);
@@ -54,7 +58,7 @@ void CommandParser::mapResult(string &path, string name, string value)
         FileEntity file(value, path);
         DirEntity dir(value, path);
 
-        if (name == "crt") {
+        if (name == "cr") {
             CreateFileCommand().run(file);
         }
         else if (name == "rm") {
@@ -69,14 +73,17 @@ void CommandParser::mapResult(string &path, string name, string value)
         else if (name == "wrt") {
             WriteFileCommand().run(file);
         }
-        else if (name == "mkdir") {
+        else if (name == "crd") {
             CreateDirCommand().run(dir);
         }
-        else if (name == "rmdir") {
+        else if (name == "rmd") {
             RemoveDirectoryCommand().run(dir);
         }
         else if (name == "cd") {
             ChangeDirCommand().run(path, value);
+        }
+        else if (name == "chd") {
+            ChangeDiskCommand().run(path, value);
         }
         else {
             this->throwUnknownCommandExeption();
@@ -87,11 +94,4 @@ void CommandParser::mapResult(string &path, string name, string value)
 void CommandParser::throwUnknownCommandExeption(void)
 {
     throw BadInputException("Unknown command or bad args, type \"help\" to see documentation");
-}
-
-void CommandParser::parse(string &currentPath, string command)
-{
-    string name, value;
-    this->parseCommand(command, name, value);
-    this->mapResult(currentPath, name, value);
 }
