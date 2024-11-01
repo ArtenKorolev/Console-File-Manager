@@ -19,10 +19,8 @@ void CommandParser::parseCommand(string command, string &name, string &value)
     }
 
     name = commandWords[0];
-    if (wordsInCommand == 1){
-        value = "";
-    }
-    else if (wordsInCommand >= 2) 
+
+    if (wordsInCommand >= 2) 
     {
         value = commandWords[1];
 

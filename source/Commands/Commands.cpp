@@ -175,7 +175,7 @@ void CleanFileCommand::run(FileEntity& entity)
 
 	if (choice == "y") 
 	{
-		file.save();
 		file.clear();	
+		file.save();
 	}
 }

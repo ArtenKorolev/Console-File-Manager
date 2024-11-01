@@ -2,7 +2,8 @@
 
 void File::throwExceptionIfNotExists(void)
 {
-	if (!this->exists()) {
+	if (!this->exists()) 
+	{
 		throw NotExistsException("File does not exists");
 	}
 }
@@ -31,14 +32,18 @@ bool File::isSaved(void)
 
 File::File(FileEntity &file) : fileEntity(file) 
 {
-	if (!this->isFile() && this->exists()) {
+	if (!this->isFile() && this->exists()) 
+	{
 		throw BadInputException("This is not a file");
 	}
-	for (auto& i : this->disallowedSymbols) {
-		if (str_contains(file.name, i)) {
+	for (auto &i : this->disallowedSymbols) 
+	{
+		if (str_contains(file.name, i)) 
+		{
 			throw DisallowedSymbolsInNameException("File name contains disallowed symbol(s)");
 		}
 	}
+
 	FileReader reader(this->fileEntity);
 	this->content = reader.read();
 	this->saved = true;
